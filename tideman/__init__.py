@@ -99,7 +99,7 @@ def lock_pairs1():
 def lock_pairs2():
     """lock_pairs skips final pair if it creates cycle"""
     output = check50.run("./tideman_test 6 14").stdout()
-    ""output""
+    print(output)
     check50.log(output)
     check50.run("./tideman_test 6 14").stdout("false true false false false false false false false false true false false false false false false false false false false false false true false false true true false false false false false false false false ").exit(0)
     
