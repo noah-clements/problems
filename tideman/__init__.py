@@ -98,8 +98,9 @@ def lock_pairs1():
 @check50.hidden("lock_pairs did not correctly lock all non-cyclical pairs")
 def lock_pairs2():
     """lock_pairs skips final pair if it creates cycle"""
+    check50.run("./tideman_test 6 14").stdout();
     check50.run("./tideman_test 6 14").stdout("false true false false false false false false false false true false false false false false false false false false false false false true false false true true false false false false false false false false ").exit(0)
-
+    
 @check50.check(compiles)
 @check50.hidden("lock_pairs did not correctly lock all non-cyclical pairs")
 def lock_pairs3():
