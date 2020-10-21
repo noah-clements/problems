@@ -98,7 +98,7 @@ def lock_pairs1():
 @check50.hidden("lock_pairs did not correctly lock all non-cyclical pairs")
 def lock_pairs2():
     """lock_pairs skips final pair if it creates cycle"""
-    check50.log(check50.run("./tideman_test 6 14").stdout());
+    check50.log(check50.run("./tideman_test 6 14").stdout())
     check50.run("./tideman_test 6 14").stdout("false true false false false false false false false false true false false false false false false false false false false false false true false false true true false false false false false false false false ").exit(0)
     
 @check50.check(compiles)
@@ -117,4 +117,5 @@ def print_winner1():
 @check50.hidden("print_winner did not print winner of election")
 def print_winner2():
     """print_winner prints winner of election when some pairs are tied"""
+    check50.log(check50.run("./tideman_test 4 13").stdout()
     check50.run("./tideman_test 4 13").stdout("Charlie\n").exit(0)
